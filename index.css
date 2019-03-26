@@ -1,0 +1,160 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+html body{
+    width:100%;
+    height:100%;
+    background-color:#aaa;
+    overflow:hidden;
+}
+.wrap{
+    width:450px;
+    height:700px;
+    background-color:#fff;
+    margin:30px auto;
+    border-radius:20px;
+    padding:35px 0 35px 0;
+    box-sizing:border-box;/*css3盒模型 不计算padding值 */
+}
+.con{
+    width:100%;
+    height:100%;
+    /* background-color:red; */
+    background-image:url(./img/2.jpg);
+    background-size:cover;/*相当于100% 100%*/
+    background-position:center;
+    position:relative;
+}
+.con .name{
+    position:absolute;
+    top:0px;
+    width:100%;
+    height:50px;
+    text-align:center;  
+    background-color:#ccc;
+    color:#000;
+    font-size:20px;
+    line-height:50px;
+    font-weight:bold;
+}
+.inner{
+    width:90%;
+    margin:0 auto;
+}
+.con .chat-box{
+    width:100%;
+    height:calc(100% - 120px);
+    /* background-color:red; */
+    position:absolute;
+    top:60px;
+    overflow-y:scroll;
+}
+::-webkit-scrollbar{
+    width:5px;
+    height:20px;
+    /* background-color: #fff; */
+}
+.talk{
+    width:100%;
+    line-height:40px;
+    margin-bottom:8px;
+    position:relative;
+}
+.talk div{
+    display:inline-block;
+    vertical-align: middle;
+}
+.talk.my{
+    text-align:right;
+}
+.talk.rabit .text{
+    border-radius:10px;
+    max-width:230px;
+    background-color:#fff;
+    text-align:left;
+}
+.talk.my .text{
+    text-align:left;
+    border-radius:10px;
+    max-width:230px;
+    background-color:greenyellow;
+}
+.talk .text{
+    word-break:break-all;
+}
+.talk.rabit{
+    text-align:left;
+}
+.my .user{
+    border-radius:10px;
+    width:40px;
+    height:40px;
+    background-image:url(./img/1.jpg);
+    background-size:100% 100%;
+    float:right;
+    margin-left:15px;
+}
+.rabit .user{
+    border-radius:10px;
+    width:40px;
+    height:40px;
+    background-image:url(./img/3.jpg);
+    background-size:100% 100%;
+    float:left;
+    margin-right:15px;
+}
+.talk.my .text::before{
+    content:"";
+    display:block;
+    width:0px;
+    height:0px;
+    border:10px solid transparent;
+    border-left:10px solid greenyellow;
+    position:absolute; 
+    top:10px;
+    right:35px;
+}
+.talk.rabit .text::before{
+    content:"";
+    display:block;
+    width:0px;
+    height:0px;
+    border:10px solid transparent;
+    border-right:10px solid #fff;
+    position:absolute;
+    left:35px;
+    top:10px;
+}
+.input-box{
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    height:40px;
+}
+.con .input-box .inp{
+  width:80%;
+  height:30px;
+  outline:none;
+  border:none;
+  border-radius:5px;
+  text-indent:15px;
+  margin:0px 0px 15px;
+  color:#000;
+  font-size:20px;
+}
+.con .input-box .btn{
+    border:none;
+    outline:none;
+    background-color:#ccc;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+    width:15%;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    color:20px;
+    font-weight:bold;
+    margin-left:5px;
+}
